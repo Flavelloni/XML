@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<friends from="flavio">
+    <friend>
+        <firstName>Fritz</firstName>
+        <LastName>Hugentobler</LastName>
+    </friend>
+    
+    <friend>hans</friend>
+    <friend>francoise</friend>
+</friends>
