@@ -3,10 +3,10 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
 
     <xsl:output method="html"/>
-
+    
     <!-- ################################## -->
     <!-- Main -->
-    <xsl:template match="secretSocialML">
+    <xsl:template match="/">
         <html>
             <head>
                 <h1>Secret Society Platform</h1>
@@ -14,10 +14,10 @@
 
             <body>
                 <h2>Users</h2>
-                <xsl:apply-templates select="user"/>
+                <xsl:apply-templates select="*/user"/>
 
                 <h2>Societies</h2>
-                <xsl:apply-templates select="society"/>
+                <xsl:apply-templates select="*/society"/>
             </body>
         </html>
     </xsl:template>

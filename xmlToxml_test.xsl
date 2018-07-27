@@ -6,10 +6,6 @@
     
     <xsl:output method="xml"/>
     
-    <xsl:template match="/">
-        <xsl:apply-templates select="secretSocialML"/>
-    </xsl:template>
-    
     <xsl:template match="secretSocialML">
         <xsl:copy-of select="/"/>
     </xsl:template>
