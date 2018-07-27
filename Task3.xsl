@@ -3,9 +3,6 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
 
     <xsl:output method="html"/>
-    <xsl:template match="/">
-        <xsl:apply-templates select="secretSocialML"/>
-    </xsl:template>
 
     <!-- ################################## -->
     <!-- Main -->
@@ -15,22 +12,13 @@
                 <h1>Secret Society Platform</h1>
             </head>
 
-            <!-- /////////////////// -->
-            <head>
+            <body>
                 <h2>Users</h2>
-            </head>
-            <body>
                 <xsl:apply-templates select="user"/>
-            </body>
 
-            <!-- /////////////////// -->
-            <head>
                 <h2>Societies</h2>
-            </head>
-            <body>
                 <xsl:apply-templates select="society"/>
             </body>
-
         </html>
     </xsl:template>
 
@@ -62,13 +50,13 @@
         </p>
         <xsl:apply-templates select="societies/socID"/>
     </xsl:template>
-    
+
     <xsl:template match="userID">
         <p> - <xsl:value-of select="//user[@id = current()]/name"/></p>
     </xsl:template>
-    
+
     <xsl:template match="societies/socID">
-        <p> - <xsl:value-of select="//society[@id = current()]/name"/></p>        
+        <p> - <xsl:value-of select="//society[@id = current()]/name"/></p>
     </xsl:template>
 
     <!-- ################################## -->
@@ -86,6 +74,6 @@
         </p>
         <xsl:apply-templates select="members/userID"/>
     </xsl:template>
-    
-    
+
+
 </xsl:stylesheet>
