@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> 
+    
+    <xs:include schemaLocation="task2_SecretSocialML.xsd"/>
+    
+    <xs:redefine schemaLocation="task2_SecretSocialML.xsd">
+        <xs:complexType name="friendList">
+            <xs:complexContent>
+                <xs:extension base="friendList">
+                    <xs:sequence>
+                        <xs:element name="friend" type="friendType" minOccurs="0" maxOccurs="unbounded"/>                        
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:redefine>
+    
+    <xs:complexType name="friendType">
+        <xs:sequence>
+            <xs:element name="userID" type="xs:positiveInteger"/>
+            <xs:element name="distance" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    
+</xs:schema>
